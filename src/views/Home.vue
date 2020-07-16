@@ -1,11 +1,16 @@
 <template>
     <div class="Home">
-        <h2>Home</h2>
+        <px-header />
+        <px-main />
     </div>
 </template>
 
 <script>
+import PxHeader from '@/components/Home/PxHeader';
+import PxMain from '@/components/Home/PxMain';
+
 export default {
-    name: 'Home'
+    name: 'Home',
+    components: { PxHeader, PxMain }
 }
 </script>

@@ -1,13 +1,17 @@
 <template>
     <div class="App">
-        <h2>App</h2>
-
+        <px-nav />
         <router-view />
+        <px-footer />
     </div>
 </template>
 
 <script>
+import PxNav from '@/components/Global/PxNav';
+import PxFooter from '@/components/Global/PxFooter';
+
 export default {
-    name: 'App'
+    name: 'App',
+    components: { PxNav, PxFooter }
 }
 </script>

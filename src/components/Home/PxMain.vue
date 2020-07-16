@@ -4,6 +4,13 @@
     </main>
 </template>
 
+<style lang="scss" scoped>
+.main {
+    height: auto;
+    width: 100%;
+}
+</style>
+
 <script>
 export default {
     name: 'PxMain'
