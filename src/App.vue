@@ -1,10 +1,14 @@
 <template>
     <div class="App">
-        <px-nav />
+        <!-- <px-nav /> -->
         <router-view />
         <px-footer />
     </div>
 </template>
+
+<style lang="scss">
+@import './assets/scss/main';
+</style>
 
 <script>
 import PxNav from '@/components/Global/PxNav';

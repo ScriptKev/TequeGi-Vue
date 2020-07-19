@@ -1,6 +1,8 @@
 <template>
     <main class="main">
-        <h2>Main</h2>
+        <section class="main__widget--primary">
+            Hola
+        </section>
     </main>
 </template>
 
@@ -8,6 +10,16 @@
 .main {
     height: auto;
     width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    align-content: center;
+    justify-items: center;
+
+    &__widget--primary {
+        margin: -40px auto 0 auto;
+
+    }
 }
 </style>
 

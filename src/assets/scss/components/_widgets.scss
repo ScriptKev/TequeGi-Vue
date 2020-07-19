@@ -1,0 +1,13 @@
+.main__widget {
+    border-radius: 10px;
+    background-color: #ec5656;
+    width: 315px;
+    height: 100px;
+    box-shadow: 1px 1px 6px #0000006c;
+
+}
+
+.main__widget--primary {
+    @extend .main__widget;
+
+}
