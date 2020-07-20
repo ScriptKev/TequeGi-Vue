@@ -1,14 +1,39 @@
 <template>
     <nav class="nav">
-        <h2>Nav</h2>
+        <figure class="nav__logo">
+            <!-- <img src="" alt="logo"> -->
+            <router-link to="/" class="nav__links--item">
+                <h2>TequeGi</h2>
+            </router-link>
+        </figure>
+
+        <section class="nav__links">
+            <router-link to="/about" class="nav__links--item">Nosotros</router-link>
+            <router-link to="/contact" class="nav__links--item">Contactanos</router-link>
+        </section>
     </nav>
 </template>
 
 <style lang="scss" scoped>
+@import '../../assets/scss/lib/variables';
+
 .nav {
-    background-color: #dbdbdb;
+    background-color: transparent;
     width: 100%;
-    height: 10vh;
+    height: 15vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &__links {
+
+        &--item {
+            font-size: 1.1rem;
+            margin: 0 10px;
+            color: white;
+            text-shadow: 1px 1px 6px black;
+        }
+    }
 }
 </style>
 

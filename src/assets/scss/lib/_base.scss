@@ -1,0 +1,28 @@
+/* Scrollbar Style */
+body::-webkit-scrollbar {
+    background-color: pink;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #ff9d00;
+    border-radius: 5px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+
+    &:focus {
+        outline: none;
+    }
+}
