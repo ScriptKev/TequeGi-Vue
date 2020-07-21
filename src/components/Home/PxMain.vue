@@ -1,5 +1,6 @@
 <template>
     <main class="main">
+<<<<<<< HEAD
         <div class="main__container">
             <!-- Main Widgets -->
             <section class="main__widgets">
@@ -41,6 +42,11 @@
                 </section>
             </section>
         </div>
+=======
+        <section class="main__widget--primary">
+            Hola
+        </section>
+>>>>>>> e7b568bff4e939b47b80f4f82e0340c9b3062028
     </main>
 </template>
 
@@ -48,6 +54,7 @@
 .main {
     height: auto;
     width: 100%;
+<<<<<<< HEAD
 
     &__container {
         width: 100%;
@@ -111,6 +118,17 @@
                 background: #dbdbdba4;
             }
         }
+=======
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    align-content: center;
+    justify-items: center;
+
+    &__widget--primary {
+        margin: -40px auto 0 auto;
+
+>>>>>>> e7b568bff4e939b47b80f4f82e0340c9b3062028
     }
 }
 </style>

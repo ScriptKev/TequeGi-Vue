@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Scrollbar Style */
 body::-webkit-scrollbar {
     background-color: pink;
@@ -6,12 +7,19 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-thumb {
     background: #ff9d00;
     border-radius: 5px;
+=======
+@import './variables';
+
+a {
+    text-decoration: none;
+>>>>>>> e7b568bff4e939b47b80f4f82e0340c9b3062028
 }
 
 ul {
     list-style: none;
 }
 
+<<<<<<< HEAD
 a {
     text-decoration: none;
 }
@@ -21,8 +29,27 @@ button {
     height: 40px;
     border: none;
     border-radius: 5px;
+=======
+button {
+    border: none;
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: medium;
+    font-weight: bold;
+    box-shadow: 1px 1px 6px #00000062;
+    cursor: pointer;
+    transition: 500ms all ease-in-out;
+>>>>>>> e7b568bff4e939b47b80f4f82e0340c9b3062028
 
     &:focus {
         outline: none;
     }
+<<<<<<< HEAD
+=======
+
+    &:active {
+        color: white;
+    }
+>>>>>>> e7b568bff4e939b47b80f4f82e0340c9b3062028
 }

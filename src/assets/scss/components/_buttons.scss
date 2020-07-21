@@ -1,0 +1,7 @@
+.cta {
+
+    &__primary {
+        background-color: map-get($Colors, 'Primary' );
+    }
+}
+
