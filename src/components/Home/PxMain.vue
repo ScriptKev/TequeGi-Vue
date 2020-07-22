@@ -1,6 +1,5 @@
 <template>
     <main class="main">
-<<<<<<< HEAD
         <div class="main__container">
             <!-- Main Widgets -->
             <section class="main__widgets">
@@ -28,7 +27,7 @@
                 <section class="main__products--grid">
                     <article class="product" v-for='( p, i ) in mainProducts' :key='i'>
                         <figure class="product__img">
-                            <img src="" :alt="p.title">
+                            <img :src="p.img" :alt="p.title" width="100%" height="100%">
                         </figure>
 
                         <section class="product__name">
@@ -41,12 +40,11 @@
                     </article>
                 </section>
             </section>
+
+            <section class="main__steps">
+                <px-steps />
+            </section>
         </div>
-=======
-        <section class="main__widget--primary">
-            Hola
-        </section>
->>>>>>> e7b568bff4e939b47b80f4f82e0340c9b3062028
     </main>
 </template>
 
@@ -54,7 +52,6 @@
 .main {
     height: auto;
     width: 100%;
-<<<<<<< HEAD
 
     &__container {
         width: 100%;
@@ -109,33 +106,70 @@
         }
 
         &--grid {
+            max-width: 1440px;
+            width: 90%;
+            margin: 50px auto auto auto;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             grid-template-rows: auto;
-            gap: 10px 50px;
+            gap: 20px;
+            justify-items: center;
+            align-content: center;
 
             & .product {
+                width: 300px;
+                height: 300px;
                 background: #dbdbdba4;
+                border-radius: 10px;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 200px 1fr 1fr;
+                grid-template-areas:    "img"
+                                        "title"
+                                        "description";
+
+                &__img {
+                    border-radius: 10px 10px 0 0;
+                    width: 100%;
+
+                    & img {
+                        border-radius: 10px 10px 0 0;
+                    }
+                }
             }
         }
-=======
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    align-content: center;
-    justify-items: center;
+    }
 
-    &__widget--primary {
-        margin: -40px auto 0 auto;
+    &__steps {
+        width: 100%;
+        height: auto;
+        margin-top: 50px;
 
->>>>>>> e7b568bff4e939b47b80f4f82e0340c9b3062028
+        background-image: url('../../static/img/bg.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 1;
+        transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+
+    }
+}
+
+// Media Queries
+
+@media only screen and (min-width: 1140px) {
+    .main {
+
     }
 }
 </style>
 
 <script>
+import PxSteps from '@/components/Home/PxSteps';
+
 export default {
     name: 'PxMain',
+    components: { PxSteps },
     data () {
         return {
             widgetsItem: [
@@ -163,6 +197,12 @@ export default {
                     img: require('@/static/img/tequenos.webp'),
                     title: 'Tequeno de Queso',
                     description: 'Tequeno relleno de queso'
+                },
+
+                {
+                    img: require('@/static/img/product2-tequechoco.jpg'),
+                    title: 'Tequeño de Chocolate',
+                    description: 'Tequeno relleno de chocolate'
                 },
 
                 {
