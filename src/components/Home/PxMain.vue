@@ -41,7 +41,7 @@
                 </section>
             </section>
 
-            <section class="main__steps">
+            <section class="main__steps--container">
                 <px-steps />
             </section>
         </div>
@@ -57,6 +57,7 @@
         width: 100%;
         height: 100%;
         max-width: 1440px;
+        margin: auto;
     }
 
     // Widgets
@@ -140,15 +141,15 @@
         }
     }
 
-    &__steps {
+    &__steps--container {
         width: 100%;
         height: auto;
         margin-top: 50px;
 
         background-image: url('../../static/img/bg.png');
         background-position: center;
+        background-size: 100%;
         background-repeat: no-repeat;
-        background-size: cover;
         opacity: 1;
         transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
 
@@ -195,7 +196,7 @@ export default {
             mainProducts: [
                 {
                     img: require('@/static/img/tequenos.webp'),
-                    title: 'Tequeno de Queso',
+                    title: 'Tequeño de Queso',
                     description: 'Tequeno relleno de queso'
                 },
 
@@ -207,14 +208,14 @@ export default {
 
                 {
                     img: require('@/static/img/tequenos.webp'),
-                    title: 'Tequeno de Queso',
-                    description: 'Tequeno relleno de queso'
+                    title: 'Tequeño de Bocadillo',
+                    description: 'Tequeño relleno de bocadillo'
                 },
 
                 {
                     img: require('@/static/img/tequenos.webp'),
-                    title: 'Tequeno de Queso',
-                    description: 'Tequeno relleno de queso'
+                    title: 'Personalizado',
+                    description: 'Personalizams el relleno de tus tequeños!'
                 },
             ]
         }
