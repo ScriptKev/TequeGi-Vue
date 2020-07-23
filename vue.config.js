@@ -1,10 +1,10 @@
 module.exports = {
   pwa: {
-    name: 'PokeBattle',
-    themeColor: '#F8E71C',
-    msTileColor: '#F8E71C',
+    name: 'TequeGi',
+    themeColor: '#F5A623',
+    msTileColor: '#F5A623',
     manifestOptions: {
-      background_color: '#F8E71C'
+      background_color: '#F5A623'
     }
   }
 }
