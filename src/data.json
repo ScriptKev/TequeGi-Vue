@@ -1,0 +1,35 @@
+{
+    "mainProducts": [
+        {
+            "img": "./static/img/TequeQueso.svg",
+            "id": "TequeQueso",
+            "title": "Tequeño de Queso",
+            "type": "Tequeño de Queso",
+            "description": "Tequeno relleno de queso"
+        },
+
+        {
+            "img": "./static/img/TequeChoco.svg",
+            "id": "TequeChoco",
+            "title": "Tequeño de Chocolate",
+            "type": "Tequeño de Chocolate",
+            "description": "Tequeno relleno de chocolate"
+        },
+
+        {
+            "img": "./static/img/TequeBocadillo.svg",
+            "id": "TequeBocadillo",
+            "title": "Tequeño de Bocadillo",
+            "type": "Tequeño de Bocadillo",
+            "description": "Tequeño relleno de bocadillo"
+        },
+
+        {
+            "img": "./static/img/TequePersonalizado.svg",
+            "id": "Personalizado",
+            "title": "Personalizado",
+            "type": "Personalizado",
+            "description": "Personalizamos el relleno de tus tequeños!"
+        }
+    ]
+}

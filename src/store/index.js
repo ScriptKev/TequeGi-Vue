@@ -5,6 +5,11 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
     state: {
+        modal: false,
+        clientDataDelivery: {
+            clientName: '',
+            clientPhone: '',
+        }
     },
     mutations: {
     },
@@ -13,3 +18,5 @@ export default new Vuex.Store({
     modules: {
     }
 })
+
+// 0498

@@ -25,19 +25,25 @@
                 </section>
 
                 <section class="main__products--grid">
-                    <article class="product" v-for='( p, i ) in mainProducts' :key='i'>
-                        <figure class="product__img">
-                            <img :src="p.img" :alt="p.title" width="100%" height="100%">
-                        </figure>
+                    <v-card v-for="(p , i) in mainProducts" :key="i" :loading="loading" class="mx-auto my-12" max-width="374">
+                        <v-img class="product__img" height="250" :src="p.img"></v-img>
 
-                        <section class="product__name">
-                            <h4> {{ p.title }} </h4>
-                        </section>
+                        <v-card-title> {{ p.title }} </v-card-title>
 
-                        <section class="product__shortDescription">
-                            <p> {{ p.description }} </p>
-                        </section>
-                    </article>
+                        <v-card-text>
+                            <p>
+                                {{ p.description }}
+                            </p>
+                        </v-card-text>
+
+                        <v-divider class="mx-4"></v-divider>
+
+                        <v-card-actions>
+                            <v-btn :to="{ name: 'TequeDetail', params: { id: p.id } }" color="deep-purple lighten-2" block text>
+                                Elegir
+                            </v-btn>
+                        </v-card-actions>
+                    </v-card>
                 </section>
             </section>
 
@@ -113,31 +119,11 @@
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             grid-template-rows: auto;
-            gap: 20px;
+            column-gap: 20px;
             justify-items: center;
             align-content: center;
 
-            & .product {
-                width: 300px;
-                height: 300px;
-                background: #dbdbdba4;
-                border-radius: 10px;
-                display: grid;
-                grid-template-columns: 1fr;
-                grid-template-rows: 200px 1fr 1fr;
-                grid-template-areas:    "img"
-                                        "title"
-                                        "description";
 
-                &__img {
-                    border-radius: 10px 10px 0 0;
-                    width: 100%;
-
-                    & img {
-                        border-radius: 10px 10px 0 0;
-                    }
-                }
-            }
         }
     }
 
@@ -173,6 +159,35 @@ export default {
     components: { PxSteps },
     data () {
         return {
+            // Data Form
+            valid: true,
+            clientName: '',
+            clientNameRules: [
+                v => !!v || 'El nombre y apellido es requrido',
+                v => (v && v.length <= 25) || 'No puedes exceder mas de 25 caracteres',
+            ],
+
+            clientPhone: '',
+            clientPhoneRules: [
+                v => (v && v.length <= 11) || 'No puedes exceder mas de 11 caracteres',
+                v => /^\d{0,11}$/.test(v) || 'Solo Numeros',
+            ],
+
+            // clientEmail: '',
+            // cientEmailRules: [
+            //     v => !!v || 'El correo es requerido',
+            //     v => /.+@.+\..+/.test(v) || 'Este correo no es valido',
+            // ],
+
+            clientMsj: '',
+            clientMsjRules: [
+                v => !!v || 'El correo es requerido',
+                v => (v && v.length <= 255) || 'No puedes exceder mas de 255 caracteres',
+            ],
+
+            dialog: false,
+            loading:false,
+            selection: '',
             widgetsItem: [
                 {
                     icon: require('@/static/icons/widget1-quality.svg'),
@@ -195,30 +210,44 @@ export default {
 
             mainProducts: [
                 {
-                    img: require('@/static/img/tequenos.webp'),
+                    img: require('@/static/img/TequeQueso.svg'),
+                    id: 'TequeQueso',
                     title: 'Tequeño de Queso',
+                    type: 'Tequeño de Queso',
                     description: 'Tequeno relleno de queso'
                 },
 
                 {
-                    img: require('@/static/img/product2-tequechoco.jpg'),
+                    img: require('@/static/img/TequeChoco.svg'),
+                    id: 'TequeChoco',
                     title: 'Tequeño de Chocolate',
+                    type: 'Tequeño de Chocolate',
                     description: 'Tequeno relleno de chocolate'
                 },
 
                 {
-                    img: require('@/static/img/tequenos.webp'),
+                    img: require('@/static/img/TequeBocadillo.svg'),
+                    id: 'TequeBocadillo',
                     title: 'Tequeño de Bocadillo',
+                    type: 'Tequeño de Bocadillo',
                     description: 'Tequeño relleno de bocadillo'
                 },
 
                 {
-                    img: require('@/static/img/tequenos.webp'),
+                    img: require('@/static/img/TequePersonalizado.svg'),
+                    id: 'Personalizado',
                     title: 'Personalizado',
-                    description: 'Personalizams el relleno de tus tequeños!'
+                    type: 'Personalizado',
+                    description: 'Personalizamos el relleno de tus tequeños!'
                 },
             ]
         }
-    }
+    },
+
+    methods: {
+        selectProduct(e){
+            console.log(e)
+        }
+    },
 }
 </script>
