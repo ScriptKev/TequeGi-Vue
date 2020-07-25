@@ -104,6 +104,11 @@
     }
 }
 
+@media only screen and (max-width: 500px) {
+    .header {
+        margin-top: 30px;
+    }
+}
 
 @media only screen and (max-width: 1440px) {
     .main {
