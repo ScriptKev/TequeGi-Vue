@@ -1,5 +1,6 @@
 <template>
     <v-app>
+        <px-nav />
         <router-view />
         <px-footer />
     </v-app>
@@ -12,21 +13,11 @@
 </style>
 
 <script>
-import {mapState} from 'vuex'
+import PxNav from '@/components/Global/PxNav';
 import PxFooter from '@/components/Global/PxFooter';
 
 export default {
     name: 'App',
-    components: { PxFooter },
-
-    methods: {
-        openModal(){
-            console.log(this.modal)
-        }
-    },
-
-    computed: {
-        ...mapState(['modal'])
-    }
+    components: { PxFooter, PxNav }
 }
 </script>

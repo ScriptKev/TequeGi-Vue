@@ -30,8 +30,8 @@
         &--item {
             font-size: 1.1rem;
             margin: 0 10px;
-            color: white;
-            text-shadow: 1px 1px 6px black;
+            color: map-get($Colors, 'Primary');
+            text-shadow: 1px 1px 5px map-get($Colors, 'Secondary');
         }
     }
 }

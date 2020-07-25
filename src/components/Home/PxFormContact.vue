@@ -150,6 +150,29 @@
     width: 550px;
     margin: auto;
 }
+
+@media only screen and (max-width: 500px) {
+    .contact__container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:    "form"
+                                "resultsOne"
+                                "results";
+
+        & .results {
+            height: 300px !important;
+            margin: 30px 0;
+        }
+
+        & .results__clientName {
+
+            &--welcome {
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
 </style>
 
 <script>

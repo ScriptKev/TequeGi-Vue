@@ -25,7 +25,7 @@
                 </section>
 
                 <section class="main__products--grid">
-                    <v-card v-for="(p , i) in mainProducts" :key="i" :loading="loading" class="mx-auto my-12" max-width="374">
+                    <v-card v-for="(p , i) in mainProducts" :key="i" :loading="loading" class="mx-auto my-12 product" max-width="374">
                         <v-img class="product__img" height="250" :src="p.img"></v-img>
 
                         <v-card-title> {{ p.title }} </v-card-title>
@@ -72,7 +72,7 @@
         max-width: 1440px;
         width: 90%;
         height: 220px;
-        margin: -100px auto 0 auto;
+        margin: auto;
 
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -144,9 +144,48 @@
 
 // Media Queries
 
-@media only screen and (min-width: 1140px) {
+@media only screen and (max-width: 1440px) {
+    .main {
+        
+        &__products {
+
+            &--grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 940px) {
     .main {
 
+        &__widgets {
+            grid-template-columns: 1fr 1fr;
+            row-gap: 50px;
+            margin-top: 150px;
+            height: min-content;
+        }
+    }
+}
+
+@media only screen and (max-width: 940px) {
+    .main {
+        
+        &__products {
+
+            &--grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .main {
+        
+        & .product {
+            width: 320px;
+        }
     }
 }
 </style>
@@ -202,7 +241,7 @@ export default {
                 },
 
                 {
-                    icon: require('@/static/icons/widget2-delivery.svg'),
+                    icon: require('@/static/icons/widget3-service.svg'),
                     title: 'Servicio',
                     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, natus.'
                 }

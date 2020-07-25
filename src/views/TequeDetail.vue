@@ -1,7 +1,5 @@
 <template>
     <div class="TequeDetail">
-        <px-nav />
-
         <section class="TequeDetail__grid">
 
             <figure class="TequeDetail__img">
@@ -109,15 +107,8 @@ export default {
     },
 
     created () {
-        this.getProduct();
         console.log(this.$route.params.id);
 
-    },
-
-    methods: {
-        getProduct () {
-            const id = this.$route.params.id
-        }
     }
 }
 </script>

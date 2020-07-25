@@ -310,6 +310,50 @@
         }
     }
 }
+
+@media only screen and (max-width: 760px) {
+    .steps {
+
+        &__container {
+
+            & .step__primary {
+                grid-template-columns: 1fr;
+                grid-template-rows: 200px min-content min-content;
+                grid-template-areas:    "step1Title"
+                                        "step1Description"
+                                        ".";
+                row-gap: 50px;
+            }
+
+            & .step__secondary {
+                grid-template-columns: 1fr;
+                grid-template-rows: 200px min-content min-content;
+                grid-template-areas:    "step2Title"
+                                        "step2Description"
+                                        ".";
+                row-gap: 50px;
+            }
+
+            & .step__tertiary {
+                grid-template-columns: 1fr;
+                grid-template-rows: 200px min-content min-content;
+                grid-template-areas:    "step3Title"
+                                        "step3Description"
+                                        ".";
+                row-gap: 50px;
+            }
+
+            & .step__quaternary {
+                grid-template-columns: 1fr;
+                grid-template-rows: 200px min-content min-content;
+                grid-template-areas:    "step4Title"
+                                        "step4Description"
+                                        ".";
+                row-gap: 50px;
+            }
+        }
+    }
+}
 </style>
 
 <script>
