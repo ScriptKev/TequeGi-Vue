@@ -8,8 +8,8 @@
         </figure>
 
         <section class="nav__links">
-            <router-link to="/about" class="nav__links--item">Nosotros</router-link>
-            <router-link to="/contact" class="nav__links--item">Contactanos</router-link>
+            <router-link to="/" class="nav__links--item">Nosotros</router-link>
+            <router-link to="/" class="nav__links--item">Contactanos</router-link>
         </section>
     </nav>
 </template>
